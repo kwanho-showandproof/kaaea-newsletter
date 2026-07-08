@@ -26,33 +26,31 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 3) collect.py 가 필요로 하는 라이브러리 설치
+      # 3) 필요한 라이브러리 설치
+      #    requests/dotenv: 뉴스 수집용, anthropic: 부정필터·요약용
       - name: 라이브러리 설치
-        run: pip install requests python-dotenv
+        run: pip install requests python-dotenv anthropic
 
       # 4) 뉴스 수집 (STEP 1)
       #    Secrets에 등록한 네이버 키를 환경변수로 전달한다.
-      #    코드에는 키가 없고, 여기서 GitHub 금고의 값을 넣어준다.
       - name: 뉴스 수집 실행
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python collect.py
 
-      # ------------------------------------------------------------
-      # ※ STEP 2 부정 뉴스 필터링(filter.py)이 들어갈 자리 (지금은 없음)
-      #   나중에 여기에 아래 같은 단계를 추가한다:
-      #   - name: 부정 뉴스 필터링
-      #     env:
-      #       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      #     run: python filter.py
-      # ------------------------------------------------------------
+      # 5) 부정 뉴스 필터링 + 요약 (STEP 2)
+      #    Secrets에 등록한 Claude 키를 환경변수로 전달한다.
+      - name: 부정 필터링 및 요약 실행
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python filter.py
 
-      # 5) 웹진 생성 (STEP 3)
+      # 6) 웹진 생성 (STEP 3)
       - name: 웹진 생성 실행
         run: python generate.py
 
-      # 6) 생성 결과를 저장소에 반영 (변경 있을 때만 커밋)
+      # 7) 생성 결과를 저장소에 반영 (변경 있을 때만 커밋)
       - name: 생성 결과 저장소에 반영
         run: |
           git config user.name "github-actions[bot]"
