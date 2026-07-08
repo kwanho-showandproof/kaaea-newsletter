@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>한국자동차환경협회 뉴스 웹진</title>
+<title>자동차 환경 데일리 제0708호 · 2026-07-08</title>
 <style>
   :root {
     --primary: #1F4E79; --primary-dark: #163C5E; --primary-light: #E6F1FB;
@@ -39,39 +39,11 @@
     text-align: center; font-size: 12px; color: var(--text-mute); line-height: 1.7; margin-top: 40px; }
   .footer strong { color: var(--text-sub); }
 
-  .tabs { background: var(--card); border-bottom: 2px solid var(--border); padding: 0;
-    display: flex; justify-content: center; gap: 0; }
-  .tab { padding: 16px 28px; cursor: pointer; font-size: 15px; color: var(--text-sub);
-    border-bottom: 3px solid transparent; transition: all 0.15s; font-weight: 500; }
-  .tab:hover { color: var(--primary); background: var(--primary-light); }
-  .tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 700; background: var(--primary-light); }
-  .page { display: none; }
-  .page.active { display: block; }
-  .info-box { background: var(--primary-light); border-left: 4px solid var(--primary); padding: 14px 18px;
-    border-radius: 4px; font-size: 13px; color: #0C2C4A; margin-bottom: 22px; line-height: 1.6; }
-  .info-box strong { color: var(--primary); }
-  .archive-search { background: var(--card); border: 1px solid var(--border); border-radius: 8px;
-    padding: 16px 20px; margin-bottom: 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-  .search-label { font-size: 13px; color: var(--text-sub); font-weight: 500; }
-  .search-input { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
-    font-family: inherit; flex: 1; min-width: 200px; }
-  .search-select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
-    font-family: inherit; background: var(--card); }
-  .search-btn { padding: 8px 16px; background: var(--primary); color: white; border: none;
-    border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 500; }
-  .search-btn:hover { background: var(--primary-dark); }
-  .archive-row { display: grid; grid-template-columns: 110px 1fr 80px; gap: 16px; align-items: center;
-    padding: 14px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 6px;
-    margin-bottom: 8px; font-size: 13.5px; transition: border-color 0.15s; }
-  .archive-row:hover { border-color: var(--accent); background: #FAFCFE; }
-  .archive-date { font-weight: 700; color: var(--primary); font-size: 13px; }
-  .archive-title { font-weight: 500; color: var(--text); }
-  .archive-link { color: var(--accent); font-weight: 600; text-align: right; font-size: 13px;
-    text-decoration: none; cursor: pointer; background: none; border: none; font-family: inherit; padding: 0; }
-  .archive-link:hover { text-decoration: underline; }
-  .footer-links { margin-top: 10px; font-size: 11.5px; }
-  .footer-links a { color: var(--text-mute); text-decoration: none; margin: 0 6px; cursor: pointer; }
-  .footer-links a:hover { color: var(--primary); text-decoration: underline; }
+  .back-bar { background: var(--card); border-bottom: 1px solid var(--border); padding: 12px 32px; }
+  .back-link { color: var(--accent); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; }
+  .back-link:hover { text-decoration: underline; }
+  .archive-badge { display: inline-block; background: var(--primary-light); color: var(--primary);
+    font-size: 11px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -83,19 +55,16 @@
   <div class="webzine-date">2026년 7월 8일 (수) · 제 0708호</div>
 </header>
 
-<div class="member-notice">
-  본 웹진은 한국자동차환경협회 회원사를 위한 뉴스 모니터링 서비스입니다.
+<div class="back-bar">
+  <a class="back-link" href="../index.html">← 오늘의 웹진으로 돌아가기</a>
+  <span class="archive-badge">지난 뉴스 · 제0708호</span>
 </div>
 
-<nav class="tabs">
-  <div class="tab active" onclick="go('daily')">데일리 모니터링</div>
-  <div class="tab" onclick="go('global')">해외뉴스 모니터링</div>
-  <div class="tab" onclick="go('archive')">이전 뉴스 보기</div>
-</nav>
+<div class="member-notice">
+  본 자료는 2026-07-08 발송된 웹진 원본입니다.
+</div>
 
 <main>
-
-<section class="page active" id="daily">
   <div class="cat-section">
     <div class="cat-header">상위기관 뉴스</div>
     <div class="cat-body">
@@ -318,216 +287,15 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="page" id="global">
-  <div class="info-box">
-    <strong>해외뉴스 모니터링 안내</strong> · EU·미국·중국 등 주요국의 자동차 환경 정책과 글로벌 시장 동향을 별도로 모아 정리한 섹션입니다. 매일 데일리 모니터링과 함께 갱신됩니다.
-  </div>
-  <div class="cat-section">
-    <div class="cat-header">유럽 (EU)</div>
-    <div class="cat-body">
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.seoulfn.com/news/articleView.html?idxno=632859" target="_blank" rel="noopener">1. 현대제철, EU 고객사 간담회 개최···&quot;규제 장벽 넘어 유럽 시장 공략...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 글로벌 환경·무역 규제 장벽으로 가로막힌 유럽 자동차강판 시장  공략에 나섰다. 현대제철은 최근 개최된... 대상으로 자동차강판 공급 안정성을 보장하는 한편, 최근 유럽 시장의 최대 화두인 유럽연합(EU)의 철강...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.news1.kr/industry/general-industry/6220299" target="_blank" rel="noopener">2. 현대제철, 유럽 고객사 초청 간담회…탄소저감 강판 홍보</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 현대제철(004020)은 자동차 경주대회 월드랠리챔피언십(WRC) 그리스 랠리 기간 개최지에서 유럽 고객사 대상... 탄소국경조정제도란 환경 규제가 느슨한 국가에서 만든 제품을 EU 역내로 수출할 때 해당 제품을 만드는 데...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.sisafocus.co.kr/news/articleView.html?idxno=362192" target="_blank" rel="noopener">3. 현대제철, EU 탄소규제 대응 속도…유럽 고객사 협력 강화</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> (사진 / 현대제철 제공) 유럽 철강 시장에서 탄소 규제와 통상 환경 변화가 이어지는 가운데, 현대제철이... 이번 행사에서 현대제철은 자동차강판 공급 안정성과 유럽연합(EU) 철강 관세할당(TRQ), 탄소국경조정제도(CBAM)...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.thevaluenews.co.kr/news/view.php?idx=199922" target="_blank" rel="noopener">4. [산업 레이더] 현대제철·HMM, 유럽 공략 강화…고객 접점 확대·물류망...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 현대제철은 탄소 배출 정보 관리 체계를 소개하며 글로벌 완성차 업체들이 요구하는 환경 규제 대응 능력을 강조했다. 아울러 &#x27;전기로-고로 복합 프로세스&#x27; 기반 탄소저감 강판과 3세대 자동차강판 등 고부가가치...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.iminju.net/news/articleView.html?idxno=166307" target="_blank" rel="noopener">5. [산업계 동향] 현대엘리베이터·현대제철·태광그룹</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 3세대 자동차강판 등 전략 제품의 경쟁력을 알렸다. 현대제철은 이달부터 적용되는 EU 철강 TRQ 대응 방안과 탄소국경조정제도에 대응하는 탄소정보 관리 체계를 설명했다. 글로벌 통상 규제 환경에서도 고객사 물량을...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.redian.org/news/articleView.html?idxno=256931" target="_blank" rel="noopener">6. 현대제철, 유럽 고객사와 파트너십 강화...글로벌 시장 공략 속도</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 이번 행사는 글로벌 자동차 산업 환경 변화와 통상 규제 강화에 대응해 고객사와 협력 관계를 공고히 하기... 특히 이달부터 적용되는 유럽연합(EU)의 철강 수입 규제인 저율관세율할당제(TRQ) 시행과 관련해 안정적인...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.news1.kr/industry/general-industry/6219984" target="_blank" rel="noopener">7. 엘앤에프, AI·빅데이터·블록체인 기반 스마트팩토리 구축</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 이 과정에서 지난해 12월 국내 최초로 유럽연합(EU) 자동차 산업 표준 데이터 공유 플랫폼인 &#x27;카테나엑스... 구지공장 내 스마트팩토리 구축은 유럽연합(EU) 환경 규제 대응에 도움이 될 것으로 기대된다. EU는 내년...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.newsworker.co.kr/news/articleView.html?idxno=434969" target="_blank" rel="noopener">8. [뉴스워커_현대제철] 유럽 고객사와 파트너십 강화…&#x27;탄소저감 강판&#x27; 앞...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 열고, 자동차강판 공급 역량과 친환경 기술, 통상 규제 대응 전략을 공유했다고 밝혔다. 이번 행사는 단순한 제품 소개를 넘어 유럽연합(EU)의 탄소국경조정제도(CBAM)와 철강 관세할당(TRQ) 등 강화되는 규제 환경 속에서...</p>
-      </div>
-    </div>
-  </div>
-  <div class="cat-section">
-    <div class="cat-header">미국 (USA)</div>
-    <div class="cat-body">
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.mk.co.kr/article/12092825" target="_blank" rel="noopener">1. “캐즘 여전한데 어디서 돈 벌었나요?”…LG엔솔 2분기 영업이익 1133억</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> ESS 호조·세액공제 효과로 전기차 캐즘 보릿고개 통과 LG에너지솔루션이 전기차 캐즘(수요 부진) 보릿고개를 통과했다. 미국 인플레이션 감축법(IRA)상 첨단제조생산세액공제(AMPC) 효과와 에너지저장장치(ESS) 물량...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.biztribune.co.kr/news/articleView.html?idxno=355636" target="_blank" rel="noopener">2. LG에너지솔루션, 적자 탈출…배터리 업황 회복 기대 키웠다</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 미국 인플레이션감축법(IRA) 세액공제 효과가 실적을 끌어올리며 적자에서 벗어났지만, 이를 제외하면 본업에서는 여전히 적자를 기록했다. 다만 전기차 시장 회복과 에너지저장장치(ESS) 수요 확대가 이어지면서...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.khan.co.kr/article/202607072033005" target="_blank" rel="noopener">3. LG엔솔, 전기차 캐즘 뚫고 2분기 흑자 전환 성공</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 글로벌 전기차 시장의 전반적인 수요 둔화(캐즘) 속에서 거둔 성과로, K배터리 업계가 상반기까지의... 이번 실적 방어의 일등 공신은 미국 인플레이션 감축법(IRA)에 따른 첨단 제조 생산 세액공제(AMPC) 제도 효과다....</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.thelec.kr/news/articleView.html?idxno=59210" target="_blank" rel="noopener">4. 적자 탈출한 LG엔솔, 2분기 영업익 1133억원</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 전기차(EV) 판매 부진 속에서도 에너지저장장치(ESS) 수요 확대, 원통형 배터리 판매가 실적을 견인했다.... 미국 인플레이션 감축법(IRA)상 첨단제조생산세액공제(AMPC) 보조금은 2410억원이다. 이를 제외할 경우...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.jbnews.com/news/articleView.html?idxno=1507244" target="_blank" rel="noopener">5. LG엔솔, 2분기 흑자 전환… 매출 7조원대 회복</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 이번 실적에는 미국 인플레이션감축법(IRA)에 따른 첨단제조 생산세액공제(AMPC) 2천410억원이 반영됐다.... 감소와 전기차(EV) 원통형 배터리, 유럽 중저가 전기차용 파우치 배터리 판매 확대가 실적 개선을 이끈...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.seoul.co.kr/news/economy/industry/2026/07/07/20260707500252?wlog_tag3=naver" target="_blank" rel="noopener">6. LG전자 ‘역대급 실적’…상반기에 작년 전체 영업이익 넘었다</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 북미를 중심으로 에너지저장장치(ESS) 수요가 확대하고, 전기차 배터리 출하량도 증가했다. 다만 미국 인플레이션감축법(IRA)에 근거한 첨단 제조 생산 세액공제(AMPC) 보조금은 2410억원으로 집계됐다. 이 보조금을...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.ppss.kr/news/articleView.html?idxno=301342" target="_blank" rel="noopener">7. LG엔솔, 2분기 흑자 전환…AMPC 효과 1133억 기록</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 2분기 실적에는 미국 인플레이션 감축법(IRA)에 따른 첨단 제조 생산 세액공제(AMPC)가 반영됐다. 예상 AMPC... 회사 측은 유럽 고객사향 중저가 전기차 배터리 공급 확대와 전기차 전략 고객사의 원통형 배터리 및...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.energy-news.co.kr/news/articleView.html?idxno=226636" target="_blank" rel="noopener">8. 국산 태양광 셀 4% 미만...&#x27;생산촉진세제&#x27; 도입론 확산</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 첫 번째 발제에 나선 한병화 유진투자증권 이사는 &quot;AI 데이터센터와 전기차 확산 등으로 전력 수요가... 이는 미국 인플레이션감축법(IRA)의 태양광 셀 생산세액공제 수준과 비슷하거나 낮은 수준이며, 연간 세액공제...</p>
-      </div>
-    </div>
-  </div>
-  <div class="cat-section">
-    <div class="cat-header">중국 (China)</div>
-    <div class="cat-body">
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.joongang.co.kr/article/25443207" target="_blank" rel="noopener">1. 딥시크 10조 유치 성공, 중국 AI 역사 다시 쓰나?</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 2026년 6월, 중국 AI 업계는 역사를 다시 썼다. 한화 약 10조원, 중국 AI 사상 단일 라운드 최대 규모의... 세계 최대 전기차 배터리 기업 CATL(寧德時代)는 50억 위안(약 1조 원)을 넣었다. 배터리 회사가 AI 기업에 1조 원을...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.venturesquare.net/1096675/" target="_blank" rel="noopener">2. 전기차는 사고, 비용은 나눈다…차봇 데이터로 본 2026 상반기 신차 소...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 수입 전기차에서는 BMW i5와 아우디 Q4 e-tron 등이 소비자의 구매 검토를 이끌며 프리미엄 전기차 수요도 꾸준히 확대되는 모습이었다. 특히 중국 브랜드 BYD 씨라이언 7은...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.mk.co.kr/article/12092825" target="_blank" rel="noopener">3. “캐즘 여전한데 어디서 돈 벌었나요?”…LG엔솔 2분기 영업이익 1133억</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 테슬라의 중국 상하이 기가 팩토리 생산 전기차 물량이 꾸준히 증가하고 유럽향 전기차에 들어가는 중저가 배터리 제품 물량이 늘어나는 등 전기차 판매량이 회복세를 보이는 것 역시 긍정적 영향을 줬다. 업계는...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.newspim.com/news/view/20260707001186" target="_blank" rel="noopener">4. 뉴욕증시 프리뷰, 삼성전자 &#x27;어닝 서프&#x27;에도 반도체주 약세에 나스닥 선...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 여기에 중국 AI 스타트업 딥시크(DeepSeek)의 자체 AI 반도체 개발 소식까지 더해지면서 AI 랠리의 지속... 반면 전기차 업체 ▲리비안(RIVN)은 클래스A 보통주 7500만주 공개 발행을 발표하면서 11% 이상 급락했다. 회사는...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.yeongnam.com/web/view.php?key=20260707028364574" target="_blank" rel="noopener">5. [미래 핵심 산업 TK배터리의 一生 ①] 2차전지 배터리 소재 이렇게 만들...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 대구 달성군 국가산업단지에 구축된 비중국 최초 LFP 양산공장인 엘앤에프플러스 전경. &lt;엘앤에프 제공&gt; 전기차 캐즘(Chasm) 우려 속에서도 2차전지는 미래 핵심산업이다. 영남일보는 원료(소재)부터 배터리 제조...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://coinreaders.com/246533" target="_blank" rel="noopener">6. 은 시장, 중국 수출 통제에 &#x27;발칵&#x27;...미국 핵심 광물 지정에 100달러 재돌...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 중국은 태양광 패널과 전기차 인프라 제조에서 지배적 위치를 차지하고 있다. 중국은 황산 수출 금지 조치도 시행했다. 황산은 칠레의 힙리치 구리 채굴에 쓰이는 핵심 화학 원료다. 전 세계 은의 약 70%는 구리, 납...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.laborplus.co.kr/news/articleView.html?idxno=41097" target="_blank" rel="noopener">7. 7월 2주 주요 제조업 전망</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 실적에 영향을 미친 것은 국내외 전기차·하이브리도 모델 판매 호조임. 기아의 상반기 전기차 판매... 중국 시장에선 BYD와의 경쟁에 밀려 완성차 판매 순위에서 수년간 유지하던 1위 자리를 뺏겼으며, 지난해엔...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.insidevina.com/news/articleView.html?idxno=43545" target="_blank" rel="noopener">8. [베트남 주간 이슈] &quot;하반기 11.9% 달린다&quot;...2분기 8.39% 대박에 &#x27;부동산...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 중국 자동차 대기업 BY드(BYD)는 현지 여객·물류 대기업 프엉짱(Phuong Trang)과 손잡고 전기차 인프라 구축을 시작했다. 급성장하는 베트남 친환경 모빌리티 시장의 주도권을 선점하기 위한 전략적 제휴다. ■ 금융·부동산...</p>
-      </div>
-    </div>
-  </div>
-  <div class="cat-section">
-    <div class="cat-header">글로벌 종합</div>
-    <div class="cat-body">
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.yeongnam.com/web/view.php?key=20260707028364574" target="_blank" rel="noopener">1. [미래 핵심 산업 TK배터리의 一生 ①] 2차전지 배터리 소재 이렇게 만들...</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 이어지는 &#x27;배터리 전 생애주기(Life-cycle)&#x27;가 대구·경북(TK) 내에서 완결되는 산업 생태계를 조명한다. 공급망 내재화, 초격차 공정 기술, 순환경제 등 각 단계별 핵심 테마를 취재해 글로벌 시장을 선도하는 지역...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="https://www.khan.co.kr/article/202607072033005" target="_blank" rel="noopener">2. LG엔솔, 전기차 캐즘 뚫고 2분기 흑자 전환 성공</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 글로벌 전기차 시장의 전반적인 수요 둔화(캐즘) 속에서 거둔 성과로, K배터리 업계가 상반기까지의 부진을 딛고 하반기 본격적인 회복 흐름의 신호탄을 쐈다는 평가가 나온다. LG에너지솔루션은 올해 2분기 연결 기준...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.dynews.co.kr/news/articleView.html?idxno=857177" target="_blank" rel="noopener">3. 동양칼럼/ 갑자기 낯설어진 세계: 마법과 야만의 양면성</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> AI) 시장에 무려 약 4000조원(약 3조달러)에 달하는 천문학적인 자금이 투입하기 하고, 대통령이 직접 이 프로젝트 추진을 챙기기로 했다. 올해 초까지만 해도 상상조차 하기 힘들었던 메가 프로젝트다. 글로벌 빅테크...</p>
-      </div>
-      <div class="news-item">
-        <div class="news-title"><a href="http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&amp;key=20260708.22011002145" target="_blank" rel="noopener">4. 배터리팩 ‘진심’이 만든 혁신…세계 첫 SBMS 넘어 나트륨 전지 공략</a></div>
-        <p class="news-summary"><span class="news-source">[7.7/]</span> 받으며 글로벌 무대에서 경쟁력을 인정받았다. 현재 혼다 미쓰비시 도요타 등 일본 완성차 브랜드들과... 올해는 나트륨 배터리 시장을 새롭게 섭렵해 30억 원 정도의 매출을 낼 계획”이라고 강조했다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="page" id="archive">
-  <div class="info-box">
-    <strong>이전 뉴스 보기</strong> · 과거 발송된 뉴스 웹진을 날짜별로 조회하실 수 있습니다. 열람 버튼을 누르면 해당 날짜의 웹진 페이지로 이동합니다. 회원사는 언제든 지난 자료를 자유롭게 열람할 수 있습니다.
-  </div>
-
-  <div class="archive-search">
-    <span class="search-label">검색</span>
-    <input type="text" class="search-input" placeholder="키워드로 검색 (예: 전기차 보조금)">
-    <select class="search-select">
-      <option>전체 카테고리</option>
-      <option>상위기관 뉴스</option>
-      <option>배출 저감사업 뉴스</option>
-      <option>전기·수소차 뉴스</option>
-      <option>회원사 뉴스</option>
-      <option>한국자동차환경협회 뉴스</option>
-      <option>기타 뉴스</option>
-    </select>
-    <button class="search-btn">검색</button>
-  </div>
-
-  <div class="archive-row">
-    <div class="archive-date">2026.07.08</div>
-    <div class="archive-title">제 0708호 · </div>
-    <div><button class="archive-link" onclick="openEdition('2026-07-08')">열람 →</button></div>
-  </div>
-  <div class="archive-row">
-    <div class="archive-date">2026.06.18</div>
-    <div class="archive-title">제 0073호 · 배터리 재생원료 인증, 수소경제 재편, 부산 대형선박 전동화</div>
-    <div><button class="archive-link" onclick="openEdition('2026-06-18')">열람 →</button></div>
-  </div>
-  <div class="archive-row">
-    <div class="archive-date">2026.06.17</div>
-    <div class="archive-title">제 0072호 · EU 내연기관 금지 재확인, LG엔솔 美 양산, 현대차 조지아</div>
-    <div><button class="archive-link" onclick="openEdition('2026-06-17')">열람 →</button></div>
-  </div>
-
-  <div style="text-align: center; margin-top: 22px;">
-    <button class="search-btn" style="background: var(--card); color: var(--primary); border: 1px solid var(--primary);">더 이전 자료 보기</button>
-  </div>
-</section>
-
 </main>
 
 <footer class="footer">
   <strong>한국자동차환경협회 (KAAEA)</strong><br>
-  본 뉴스 웹진은 협회 회원사를 위한 일일 모니터링 서비스로, 매일 오전 자동 갱신됩니다.<br>
+  본 뉴스 웹진은 협회 회원사를 위한 일일 모니터링 서비스입니다.<br>
   본 자료의 무단 복제·배포를 금합니다.
-  <div class="footer-links">
-    <a onclick="return false;">협회 공식 홈페이지</a> ·
-    <a onclick="return false;">회원사 문의</a> ·
-    <a onclick="return false;">수신거부</a>
-  </div>
 </footer>
 
 <script>
-  function go(id) {
-    document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
-    document.getElementById(id).classList.add('active');
-    var tabs = document.querySelectorAll('.tab');
-    var ids = ['daily', 'global', 'archive'];
-    var idx = ids.indexOf(id);
-    if (idx >= 0) tabs[idx].classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function openEdition(date) {
-    window.location.href = 'news/' + date + '.html';
-  }
-
   function openArticle(e) {
     if (e && e.preventDefault) e.preventDefault();
     alert('이 기사는 원문 링크가 아직 연결되지 않았습니다.');
