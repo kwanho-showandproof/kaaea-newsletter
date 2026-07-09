@@ -3,10 +3,10 @@
     "date": "2026-07-09",
     "collected": 72,
     "duplicates_removed": 25,
-    "negative_blocked": 16,
+    "negative_blocked": 15,
     "hard_blocked": 0,
-    "ai_blocked": 16,
-    "final_published": 31,
+    "ai_blocked": 15,
+    "final_published": 32,
     "by_category": {
       "상위기관 뉴스": 6,
       "배출 저감사업 뉴스": 3,
