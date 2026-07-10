@@ -19,15 +19,15 @@
   {
     "date": "2026-07-10",
     "collected": 65,
-    "duplicates_removed": 27,
-    "negative_blocked": 11,
+    "duplicates_removed": 30,
+    "negative_blocked": 14,
     "hard_blocked": 0,
-    "ai_blocked": 11,
-    "final_published": 27,
+    "ai_blocked": 14,
+    "final_published": 21,
     "by_category": {
       "상위기관 뉴스": 0,
       "배출 저감사업 뉴스": 1,
-      "전기·수소차 뉴스": 2,
+      "전기·수소차 뉴스": 1,
       "한국자동차환경협회 뉴스": 5,
       "기타 뉴스": 1,
       "회원사 뉴스": 3
