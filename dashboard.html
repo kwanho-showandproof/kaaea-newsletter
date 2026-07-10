@@ -70,12 +70,16 @@
   .bar-track { flex: 1; background: #EEF1F4; border-radius: 4px; height: 20px; position: relative; }
   .bar-fill { background: var(--primary); height: 100%; border-radius: 4px; min-width: 2px; }
   .bar-val { width: 40px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
-  .trend { display: flex; align-items: flex-end; gap: 6px; height: 150px; padding: 10px 0 0;
+  .trend { display: flex; align-items: flex-end; gap: 6px; height: 170px; padding: 10px 0 0;
     border-bottom: 1px solid var(--border); }
   .trend-col { flex: 1; height: 100%; display: flex; flex-direction: column;
     justify-content: flex-end; align-items: center; min-width: 20px; }
-  .trend-bars { display: flex; gap: 3px; align-items: flex-end; height: 120px; }
-  .trend-bar { width: 12px; background: var(--primary); border-radius: 3px 3px 0 0; min-height: 3px; }
+  .trend-bars { display: flex; gap: 5px; align-items: flex-end; height: 135px; }
+  .trend-barwrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+  .trend-num { font-size: 11px; font-weight: 700; margin-bottom: 3px; }
+  .trend-num.col { color: var(--primary); }
+  .trend-num.pub { color: var(--green); }
+  .trend-bar { width: 14px; background: var(--primary); border-radius: 3px 3px 0 0; min-height: 3px; }
   .trend-bar.pub { background: var(--green); }
   .trend-date { font-size: 10px; color: var(--text-mute); margin-top: 4px; }
   .trend-legend { font-size: 11px; color: var(--text-mute); margin-top: 8px; display: flex; gap: 16px; }
@@ -116,7 +120,7 @@
 
 <nav class="tabs">
   <div class="tab active" onclick="go('monitoring')">오늘의 뉴스 모니터링</div>
-  <div class="tab" onclick="go('blocked')">AI 차단 검토<span class="badge">14</span></div>
+  <div class="tab" onclick="go('blocked')">AI 차단 검토<span class="badge">8</span></div>
   <div class="tab" onclick="go('failures')">발송 실패 추적</div>
   <div class="tab" onclick="go('keywords')">키워드 관리</div>
 </nav>
@@ -135,10 +139,10 @@
       <div class="stat-value primary">30<small>건</small></div>
       <div class="stat-sub">AI 의미 판정</div></div>
     <div class="stat"><div class="stat-label">부정 차단</div>
-      <div class="stat-value danger">14<small>건</small></div>
-      <div class="stat-sub">키워드 0 · AI 14</div></div>
+      <div class="stat-value danger">8<small>건</small></div>
+      <div class="stat-sub">키워드 0 · AI 8</div></div>
     <div class="stat"><div class="stat-label">최종 발행</div>
-      <div class="stat-value green">21<small>건</small></div>
+      <div class="stat-value green">27<small>건</small></div>
       <div class="stat-sub">웹진 게시 완료</div></div>
 </div>
 
@@ -177,19 +181,31 @@
   </div>
 
   <div class="chart-box">
-    <div class="chart-title">날짜별 추이 (최근 14일)</div>
+    <div class="chart-title">날짜별 추이 (최근 7일)</div>
     <div class="trend">
       <div class="trend-col">
         <div class="trend-bars">
-          <div class="trend-bar" style="height:120px" title="수집 67"></div>
-          <div class="trend-bar pub" style="height:44px" title="발행 25"></div>
+          <div class="trend-barwrap">
+            <div class="trend-num col">67</div>
+            <div class="trend-bar" style="height:110px" title="수집 67건"></div>
+          </div>
+          <div class="trend-barwrap">
+            <div class="trend-num pub">25</div>
+            <div class="trend-bar pub" style="height:41px" title="발행 25건"></div>
+          </div>
         </div>
         <div class="trend-date">07.09</div>
       </div>
       <div class="trend-col">
         <div class="trend-bars">
-          <div class="trend-bar" style="height:116px" title="수집 65"></div>
-          <div class="trend-bar pub" style="height:37px" title="발행 21"></div>
+          <div class="trend-barwrap">
+            <div class="trend-num col">65</div>
+            <div class="trend-bar" style="height:106px" title="수집 65건"></div>
+          </div>
+          <div class="trend-barwrap">
+            <div class="trend-num pub">27</div>
+            <div class="trend-bar pub" style="height:44px" title="발행 27건"></div>
+          </div>
         </div>
         <div class="trend-date">07.10</div>
       </div>
@@ -206,7 +222,7 @@
         <div class="cat-count">1건 게시</div></div>
       <div class="news-item">
         <div class="news-title"><a href="http://www.jmbc.co.kr/news/view/66058" target="_blank" rel="noopener">고창군 운곡습지~고인돌유적, 순환버스 운행 시작 [글로컬소식]</a></div>
-        <div class="news-summary">완주군이 하반기 노후차량 조기폐차 지원사업을 추진합니다. 총 1억 6천만 원을 투입해 배출가스 5등급 차량을 우선 지원하고, 남은 예산으로 4등급 차량도 지원할 예정입니다.</div>
+        <div class="news-summary">완주군이 하반기 노후차량 조기폐차 지원사업을 추진한다. 총 1억 6천만 원을 투입해 배출가스 5등급 차량을 우선 지원하고, 남은 예산으로 4등급 차량도 함께 지원할 예정이다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
     </div>
@@ -215,7 +231,7 @@
         <div class="cat-count">1건 게시</div></div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.ccdn.co.kr/news/articleView.html?idxno=1087650" target="_blank" rel="noopener">현대차그룹, 자원순환형 청정수소 인프라 &#x27;HTWO ENERGY 청주&#x27; 구축</a></div>
-        <div class="news-summary">현대자동차그룹이 청주에 자원순환형 청정수소 인프라 &#x27;HTWO ENERGY 청주&#x27;를 구축했다. 이 시설은 시간당 최대 100㎏의 수소 충전 능력을 갖추고 있으며, 기후환경에너지환경부의 수소 생산 관련 정책을 지원하는 프로젝트로 추진되었다.</div>
+        <div class="news-summary">현대자동차그룹이 청주에 자원순환형 청정수소 인프라 &#x27;HTWO ENERGY 청주&#x27;를 구축했다. 이 시설은 시간당 최대 100㎏의 수소 충전 능력을 갖추고 있으며, 수소 생산 기술 고도화를 통해 친환경 에너지 인프라 확대를 추진하고 있다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
     </div>
@@ -224,27 +240,27 @@
         <div class="cat-count">5건 게시</div></div>
       <div class="news-item">
         <div class="news-title"><a href="http://www.econonews.co.kr/news/articleView.html?idxno=440979" target="_blank" rel="noopener">한진, 25톤 자율주행 화물트럭 첫 상업 운송 개시…주 3회 운행-안전 요...</a></div>
-        <div class="news-summary">한진이 25톤 자율주행 화물트럭의 첫 상업 운송을 개시했으며, 신호와 보행자 변수가 적은 구간에서 주 3회 운행할 예정이다. 이는 자동차융합기술원, LX공간정보연구원, 한국통합물류협회와의 협력 체계를 통해 추진되는 프로젝트이다.</div>
+        <div class="news-summary">한진이 25톤 자율주행 화물트럭의 상업 운송을 시작했으며, 신호와 보행자 변수가 적은 구간에서 주 3회 운행할 예정이다. 한진은 자동차융합기술원, LX공간정보연구원, 한국통합물류협회와 협력하여 자율주행 기술 적용을 추진하고 있다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="http://www.newstown.co.kr/news/articleView.html?idxno=708738" target="_blank" rel="noopener">평택항 배후 물류거점 육성 속도…경기경제청, 포승BIX·현덕지구 투자...</a></div>
-        <div class="news-summary">경기경제청이 평택항의 배후 물류거점 육성을 위해 포승BIX와 현덕지구에 투자를 진행 중이다. 물류단지 개발기업, 물류센터 운영사, 자동차부품 제조기업 등이 참여하여 친환경 스마트 산업단지 조성을 추진하고 있다.</div>
+        <div class="news-summary">경기경제청이 평택항 배후 물류거점 육성을 위해 포승BIX와 현덕지구에 투자를 추진하고 있다. 물류단지 개발기업, 물류센터 운영사, 자동차부품 제조기업 등이 참여하는 가운데 친환경 스마트 산업단지 조성이 진행 중이다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.dongponews.net/news/articleView.html?idxno=59198" target="_blank" rel="noopener">BMW·농심·中조선족기업까지…선양서 확인한 글로벌 경쟁력</a></div>
-        <div class="news-summary">협회가 진행한 선양 현장교육 프로그램을 통해 학생들이 중국 산업 현황과 한국 기업의 글로벌 경쟁력을 직접 체험했다. BMW, 농심 등 글로벌 기업들의 중국 진출 사례를 통해 재외동포 사회의 역할과 국제 산업환경을 이해하는 기회를 제공했다.</div>
+        <div class="news-summary">협회가 진행한 선양 현장교육 프로그램을 통해 학생들이 한국 기업의 글로벌 경쟁력과 중국 산업환경, 재외동포 사회의 역할을 직접 체험했다. BMW, 농심 등 글로벌 기업들의 중국 내 사업 현황을 확인하며 국제 산업환경에 대한 이해를 높이는 기회가 되었다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="https://kr.aving.net/news/articleView.html?idxno=1812267" target="_blank" rel="noopener">디지켐, 나노코리아 2026서 &#x27;X-Mat 탄소 소재 시리즈&#x27; 선보여... &quot;그래핀...</a></div>
-        <div class="news-summary">디지켐이 나노코리아 2026 전시회에서 그래핀 등을 활용한 &#x27;X-Mat 탄소 소재 시리즈&#x27;를 선보인다. 이 제품은 리튬 배터리, 전자 패키징, 자동차 전장 등 다양한 산업 분야에 적용되는 맞춤형 소재 솔루션이다.</div>
+        <div class="news-summary">디지켐이 나노코리아 2026 전시회에서 리튬 배터리, 전자 패키징, 자동차 전장 등 다양한 산업에 적용되는 &#x27;X-Mat 탄소 소재 시리즈&#x27;를 선보일 예정이다. 동 전시회는 나노융합기술 분야의 국제 비즈니스 전시회로, 한국나노융합산업협회가 주관한다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202607091803554800648" target="_blank" rel="noopener">[CAR 브리프] 르노코리아ㆍGMㆍ한국앤컴퍼니ㆍ한국타이어ㆍ금호타이어...</a></div>
-        <div class="news-summary">르노코리아, GM, 한국앤컴퍼니, 한국타이어, 금호타이어 등 회원사들이 환경 정화 활동과 산업 인정으로 주목받고 있다. 플로깅 등 친환경 활동과 &#x27;2026 세계 인정의 날&#x27; 산업부 장관 표창 수상 등 업계의 긍정적인 소식들을 소개한다.</div>
+        <div class="news-summary">르노코리아, GM, 한국앤컴퍼니, 한국타이어, 금호타이어 등 회원사들이 플로깅 등 환경 정화 활동을 추진하고 있으며, 한국자동차연구원이 &#x27;2026 세계 인정의 날&#x27;에서 산업부 장관 표창을 수상하는 등 업계의 환경·사회적 책임 활동이 활발히 진행되고 있다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
     </div>
@@ -252,8 +268,8 @@
       <div class="cat-head"><div class="cat-name">기타 뉴스</div>
         <div class="cat-count">1건 게시</div></div>
       <div class="news-item">
-        <div class="news-title"><a href="https://www.segye.com/newsView/20260709524551?OutUrl=naver" target="_blank" rel="noopener">&#x27;포항 전기선박·칠곡 저속자동차·안동 대마&#x27; 특구, 신산업 클러스터로...</a></div>
-        <div class="news-summary">정부가 포항, 칠곡, 안동에 전기선박, 저속자동차(LSV), 대마 등을 중심으로 한 신산업 특구를 조성한다. LSV는 시속 40㎞ 이하의 친환경 전기차량으로, 물류·관광·산업 등 다양한 분야의 수요에 대응하는 미래형 모빌리티 생산체계를 구축하고 해외 실증도 추진할 예정이다.</div>
+        <div class="news-title"><a href="https://biz.heraldcorp.com/article/10804244?ref=naver" target="_blank" rel="noopener">경북도, 안동시·포항시·칠곡군 규제자유특구 3곳 추가 지정…전국 최...</a></div>
+        <div class="news-summary">경북도가 안동시, 포항시, 칠곡군 3곳을 규제자유특구로 추가 지정했다. 대마 기반 의약산업, 친환경 전기선박, 맞춤형 모빌리티 등을 중심으로 미래산업 혁신을 추진할 계획이다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
     </div>
@@ -262,17 +278,17 @@
         <div class="cat-count">3건 게시</div></div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.jbnews.com/news/articleView.html?idxno=1507343" target="_blank" rel="noopener">에코앤드림, 전고체 배터리 소재로 R&amp;D 보폭 넓힌다</a></div>
-        <div class="news-summary">이차전지 소재기업 에코앤드림이 전고체 배터리의 핵심 소재인 황화물계 고체전해질 사업으로 연구개발 영역을 확대하고 있다. 이는 차세대 배터리 기술 개발을 위한 산업의 기술 고도화 움직임을 보여주는 사례다.</div>
+        <div class="news-summary">청주 본사의 이차전지 소재기업 에코앤드림이 전고체 배터리 핵심 소재 분야로 연구개발 영역을 확대하고 있다. 황화물계 고체전해질 사업 추진을 위해 관련 연구개발을 진행 중이다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.ebn.co.kr/news/articleView.html?idxno=1715731" target="_blank" rel="noopener">[Car &amp; Now] 제네시스, &#x27;2026 스코티시 오픈&#x27; 개막…GM 한국사업장, 서비...</a></div>
-        <div class="news-summary">청주의 하수 슬러지로부터 바이오가스를 활용하여 청정 수소를 생산·공급하는 수소 생산 체계가 구축되었다. 현대차그룹은 10일까지 충북 청주 오송컨벤션센터에서 개최되는 &#x27;2026 뉴에너지 페어 오송&#x27;에 참가하여 수소 관련 기술과 제품을 선보인다.</div>
+        <div class="news-summary">현대차그룹은 청주 오송컨벤션센터에서 개최되는 &#x27;2026 뉴에너지 페어 오송&#x27;에 참가하여 하수 슬러지 기반 바이오가스를 활용한 청정 수소 생산 및 공급 기술을 선보인다. 이는 수소 생산부터 활용까지 전주기 수소 생태계 구축 사례를 제시하는 것으로, 수소 에너지 기술 발전과 산업 동향을 보여주는 내용이다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
       <div class="news-item">
         <div class="news-title"><a href="https://www.livebiz.today/news/articleView.html?idxno=203208" target="_blank" rel="noopener">LFP가 끌어올린 배터리 양극재 시장...1∼5월 적재량 18.2% 증가</a></div>
-        <div class="news-summary">에너지 시장조사업체 SNE리서치에 따르면 1∼5월 배터리 양극재 적재량이 전년 동기 대비 18.2% 증가했다. LFP 수요 증가가 시장 성장을 주도하고 있으며, 한국 기업 중 엘엔에프가 3만t으로 3위를 기록했다.</div>
+        <div class="news-summary">에너지 시장조사업체 SNE리서치에 따르면 1~5월 배터리 양극재 적재량이 전년 대비 18.2% 증가했으며, LFP 배터리 수요 확대가 주요 요인으로 작용했다. 공급사별로는 중국 롱바이가 5만4000t으로 1위를 기록했고, 한국 기업 중에는 엘엔에프가 3만t으로 3위에 올랐다.</div>
         <div class="news-meta">[7.9]</div>
       </div>
     </div>
@@ -291,11 +307,11 @@
       <div class="stat-value danger">0<small>건</small></div>
       <div class="stat-sub">리콜·담합 등 즉시 제외</div></div>
     <div class="stat"><div class="stat-label">부정 차단(AI)</div>
-      <div class="stat-value danger">14<small>건</small></div>
+      <div class="stat-value danger">8<small>건</small></div>
       <div class="stat-sub">Claude 톤 판정</div></div>
   </div>
 
-  <div class="section-title">차단된 기사 (14건)</div>
+  <div class="section-title">차단된 기사 (8건)</div>
     <div class="blocked-item">
       <div class="blocked-head">
         <span class="reason-tag reason-ai">AI 판정</span>
@@ -337,15 +353,6 @@
         <span class="reason-tag reason-ai">AI 판정</span>
         <span class="blocked-cat">유럽 (EU)</span>
       </div>
-      <div class="blocked-title"><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4424262" target="_blank" rel="noopener">미 달러화 강보합…美·이란 이틀째 무력 충돌</a></div>
-      <div class="blocked-summary">미국과 이란의 긴장이 고조되면서 서부텍사스산원유(WTI) 8월 인도분은 전장보다 0.7% 오른 배럴당... 유로-달러 환율은 1.14266달러로 전장보다 0.00010달러(0.009%) 내려갔다. 파운드-달러 환율은 1.33898달러로 0.00124달러(0....</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">유럽 (EU)</span>
-      </div>
       <div class="blocked-title"><a href="https://www.ikbc.co.kr/article/view/kbc202607090099" target="_blank" rel="noopener">트럼프 &quot;유럽 미군 철수, 그린란드에 달려&quot;...유럽 다시 긴장</a></div>
       <div class="blocked-summary">유럽 전문 매체 유로뉴스는 그렇다고 하더라도 유럽은 사그라든 줄 알았던 그린란드 갈등이 재점화하는 것이... 우려하면서, 유럽 각국에도 상황을 안일하게 봐서는 안된다는 입장을 전달하고 있다고 유로뉴스는 전했습니다.</div>
       <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
@@ -357,42 +364,6 @@
       </div>
       <div class="blocked-title"><a href="https://www.slist.kr/news/articleView.html?idxno=750765" target="_blank" rel="noopener">더페이스샵, &#x27;K-클렌징티슈&#x27;→포포라보, &#x27;더현대Hi 라이징브랜드&#x27; 선정</a></div>
       <div class="blocked-summary">사진=더페이스샵 LG생활건강의 클린뷰티 브랜드 더페이스샵이 글로벌 마켓 인텔리전스 기업 유로모니터 인터내셔널에서 선정한 &#x27;Korea&#x27;s No.1 Facial Cleansing Wipes(클렌징 티슈)&#x27;에 2년 연속 이름을 올렸다. 유로모니터의...</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">미국 (USA)</span>
-      </div>
-      <div class="blocked-title"><a href="https://news.bizwatch.co.kr/article/industry/2026/07/08/0040" target="_blank" rel="noopener">K배터리 2분기 변수는 &#x27;ESS 전환 비용&#x27;</a></div>
-      <div class="blocked-summary">전기차(EV) 배터리 점유율이 계속 떨어지는 가운데 차선책으로 추진 중인 에너지저장장치(ESS) 시장도... 대해 &quot;미국 인플레이션 감축법(IRA)을 제외한 기준 전사 흑자 전환이 목표&quot;라고 했지만, 이 목표를 지키지...</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">중국 (China)</span>
-      </div>
-      <div class="blocked-title"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=06428806645512880" target="_blank" rel="noopener">[미리보는 이데일리 신문 ]국산 전기차, 중국산 공습에 ‘안방’ 내줄 ...</a></div>
-      <div class="blocked-summary">△1면 국산 전기차, 중국산 공습에 ‘안방’ 내줄 판 임원에 거침없이 따지는 AI...진옥동의 파격 실험 통했다 檢 보완수사권 폐지 ‘신중론’에도… 민주당 입법 속도전 파기환송 하급심 판결 기반한 노봉법 보완...</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">중국 (China)</span>
-      </div>
-      <div class="blocked-title"><a href="https://www.newsis.com/view/NISX20260709_0003703393" target="_blank" rel="noopener">6월 中승용차 수출, 전기차 수요 강세로 전년동월대비 80% 급증</a></div>
-      <div class="blocked-summary">분석가들은 이를 통해 무거운 관세로 중국 전기차 수출이 사실상 막힌 미국 시장으로의 수출 길을 열 수 있을지 주목하고 있다. 지난달 중국 자동차 그룹 지리가 지배하는 스웨덴에 본사를 둔 전기차 제조업체...</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">중국 (China)</span>
-      </div>
-      <div class="blocked-title"><a href="https://www.seoul.co.kr/news/economy/car/2026/07/09/20260709500262?wlog_tag3=naver" target="_blank" rel="noopener">가속 페달 잘못 밟으면 스스로 멈춰선다…더 뉴 그랜저에 적용된 신기술...</a></div>
-      <div class="blocked-summary">특히 세계 최대 전기차 업체 BYD는 화웨이, 샤오미 등과 밀착해 중국의 소프트웨어 생태계를 구축했다. 이에 현대차는 그랜저에 최초로 탑재된 차세대 인포테인먼트 플랫폼 ‘플레오스 커넥트’로 독자적인 AI 생태계를...</div>
       <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
     </div>
     <div class="blocked-item">
@@ -411,15 +382,6 @@
       </div>
       <div class="blocked-title"><a href="https://www.ngetnews.com/news/articleView.html?idxno=551141" target="_blank" rel="noopener">최주선 삼성SDI 사장, 배터리 겨울 끝낼까 [인물 포커스]</a></div>
       <div class="blocked-summary">글로벌 전기차 수요 회복이 예상보다 더딘 데다 중국 CATL과 BYD를 중심으로 공급 확대와 가격 경쟁이 지속되고 있기 때문이다. 업계에서는 전기차 수요 회복 여부와 함께 ESS와 전고체 배터리 등 신규 사업의 성장...</div>
-      <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
-    </div>
-    <div class="blocked-item">
-      <div class="blocked-head">
-        <span class="reason-tag reason-ai">AI 판정</span>
-        <span class="blocked-cat">중국 (China)</span>
-      </div>
-      <div class="blocked-title"><a href="https://www.ngetnews.com/news/articleView.html?idxno=550992" target="_blank" rel="noopener">ESS에 승부수…김동명, LG엔솔 체질 전환 속도 [인물 포커스]</a></div>
-      <div class="blocked-summary">전기차 수요 회복 시점이 불확실한 가운데 ESS 중심 전략이 안정적인 수익성 확보로 이어질지는 검증이 필요하다. 특히 글로벌 ESS 시장에서 중국 업체들과 가격 경쟁이 이어지고 있어 사업 확대 과정에서 경쟁력...</div>
       <div class="blocked-detail">차단 사유: 부적절/자극적 내용으로 판정</div>
     </div>
 
