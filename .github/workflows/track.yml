@@ -35,11 +35,15 @@ jobs:
         run: pip install requests python-dotenv
 
       # 4) 발송 실패 추적 (스티비 API)
-      #    STIBEE_API_KEY: 스티비 API 키 (Secrets)
-      #    STIBEE_EMAIL_IDS(선택): 추적할 이메일 ID를 콤마로 지정. 없으면 목록에서 자동 선정.
+      #    STIBEE_API_KEY: 스티비 API 키 (Secrets) — 필수
+      #    STIBEE_SUBJECT_FILTER(선택): 추적할 이메일 제목 규칙.
+      #      비워두면 코드 기본값("한국자동차환경협회 뉴스 모니터링")이 적용된다.
+      #      규칙이 바뀔 때만 Secrets 에 등록하면 코드 수정 없이 반영된다.
+      #    STIBEE_EMAIL_IDS(선택): 특정 이메일 ID만 추적. 없으면 제목 규칙으로 자동 선별.
       - name: 발송 실패 추적 실행
         env:
           STIBEE_API_KEY: ${{ secrets.STIBEE_API_KEY }}
+          STIBEE_SUBJECT_FILTER: ${{ secrets.STIBEE_SUBJECT_FILTER }}
           STIBEE_EMAIL_IDS: ${{ secrets.STIBEE_EMAIL_IDS }}
         run: python stibee.py
 
