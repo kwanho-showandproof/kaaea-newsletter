@@ -79,21 +79,7 @@ jobs:
         if: steps.check.outputs.skip == 'false'
         run: python generate.py
 
-      # 8) 스티비 이메일 초안 작성 (STEP 5 / ① 단계)
-      #    웹진 생성(위)이 성공한 뒤에만 실행된다(방법 B).
-      #    stibee_email.py 는 내부에서 "오늘(KST) 웹진인지" 다시 확인한다(방법 A).
-      #    이메일 작성이 실패해도 웹진/대시보드 커밋은 진행되도록 continue-on-error.
-      - name: 스티비 이메일 초안 작성
-        if: steps.check.outputs.skip == 'false'
-        continue-on-error: true
-        env:
-          STIBEE_API_KEY: ${{ secrets.STIBEE_API_KEY }}
-          STIBEE_LIST_ID: ${{ secrets.STIBEE_LIST_ID }}
-          STIBEE_SENDER_EMAIL: ${{ secrets.STIBEE_SENDER_EMAIL }}
-          STIBEE_SENDER_NAME: ${{ secrets.STIBEE_SENDER_NAME }}
-        run: python stibee_email.py
-
-      # 9) 생성 결과를 저장소에 반영 (변경 있을 때만 커밋)
+      # 8) 생성 결과를 저장소에 반영 (변경 있을 때만 커밋)
       - name: 생성 결과 저장소에 반영
         if: steps.check.outputs.skip == 'false'
         run: |
